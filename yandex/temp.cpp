@@ -1,27 +1,78 @@
-// Файл cpp
-#include <set>
 #include <iostream>
+#include <set>
+#include <string>
+#include <vector>
 
 using namespace std;
-int main(int argc, char *argv[])
+
+
+vector<string>  
+SplitIntoWords  ( const string&  text ) 
 {
-    set <string> a = {"hello", "man", "good"};
-    set <string> b = {"hello", "man"};
-    set <string> c;
-    
+            vector<string> words;
+                       string  word;
 
-    for ( string word : a) {
-        if  ( b.count (word))
-            continue;
-        else
-            c.insert (word);
-    }
 
-    for (string w: c) {
-        cout<<w<<endl;
-    }
-    return 0;
+                for  ( const char c : text ) {
+                    if  ( c == ' ' ) {
+                        if  ( !word.empty( )) {
+                            words.push_back ( word );
+                            word.clear      ( );
+                        }
+                    } else {
+                        word += c;
+                    }
+                }
+
+
+                if  ( !word.empty( )) {
+                      words.push_back ( word );
+                }
+                return  words;
 }
 
 
 
+set<string>  
+ParseStopWords  ( const string&  text ) {
+    set<string>  stop_words;
+    for (const string&  word : SplitIntoWords ( text )) {
+        stop_words.insert( word );
+    }
+    return  stop_words;
+}
+
+
+
+vector<string>  
+ParseQuery  ( const string      & text,
+              const set<string> & stop_words) {
+
+    vector<string>  words;
+
+    for  ( const string&  word : SplitIntoWords ( text )) {
+        if ( stop_words.count( word ) == 0 ) {
+            words.push_back( word );
+        }
+    }
+    return  words;
+}
+
+
+
+int main() {
+    // Read stop words
+
+    /*------------------->*/ string /*--->*/stop_words_joined;
+    /*------------------->*/ getline ( cin, stop_words_joined);
+    set<string> stop_words = ParseStopWords(stop_words_joined);
+	
+    // Read query
+    /*------------------------>*/ string  /*--->*/ query;
+    /*------------------------>*/ getline   ( cin, query );
+    vector<string> query_words = ParseQuery      ( query, stop_words );
+	
+    for (const string& word : query_words) {
+        cout << '[' << word << ']' << endl;
+    }
+}
