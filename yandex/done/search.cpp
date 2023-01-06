@@ -1,3 +1,29 @@
+// Поиск слов в тексте с учетом стоп слов
+
+// На вход подаётся:
+// --> строка из стоп слов (слова которые не должны участвовать в поиске)это предлоги с на у до и прочее.
+// --> количество строк в документе
+// --> сам документ
+// --> искомая строка
+// выход: номера строк (отсчет с 0) где встречаеться хоть одно совпадение.
+//
+// пример:
+// Вход:
+/*
+a an on the in is has been are with for from have be was
+4
+a small curly guinea pig with grey hair has been found
+a young 50 year old crocodile wants to make friends
+a strange brown creature was seen in the box of oranges
+a strange animal with big ears is building a house for its friends
+cheburashka with big ears likes oranges 
+
+Выход:
+{ document_id = 2 }
+{ document_id = 3 }
+*/
+
+
 #include <algorithm>
 #include <iostream>
 #include <set>
