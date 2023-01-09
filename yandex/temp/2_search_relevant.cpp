@@ -133,20 +133,22 @@ ParseQuery  ( const     string  &text,                     // Вход: стро
         return  query_words;
 }
 
-// DONE
-bool // ---------------------------------------------------// поиск в векторе слова из set. Если да то true ---
-MatchDocument  ( const vector<string>  &document_words,    // Вход: вектор слов, набор слов из set 
-                 const    set<string>  &query_words)       // Выход: true есть совпадения, false нет сопадений
+// вроде бы должно быть ОК 
+bool // -----------------------------------------------------------------------// поиск в векторе слова из set. Если да то true ---
+MatchDocument  ( const vector< pair<int, vector<string>>>  &document_words,    // Вход: вектор слов, набор слов из set 
+                 const    set<string>  &query_words)                           // Выход: true есть совпадения, false нет сопадений
 {
-        for ( string str : document_words) 
+        for (const auto & [n,vs] : document_words) 
         {
-            if  ( query_words.count ( str ) )
-                return true;
+            for (const auto i : vs) {
+                if  ( query_words.count ( i ))
+                    return true;
+            }
         }
         return false;
 }
 //===============================================================================================
-vector<pair<int, int>> // --------------------------------------------------------------------------
+vector<pair<int, int>> // ----------------------------------------------------------------------- номер строки, релевантность
 FindDocuments  ( const vector<  pair<int, vector<string> >  >& documents,
                  const set<string>  &stop_words,
                  const     string   &query)
@@ -154,6 +156,11 @@ FindDocuments  ( const vector<  pair<int, vector<string> >  >& documents,
 
         vector<int> matched_documents;
         set<string> string_out_set  =  ParseQuery ( query, stop_words );
+
+
+НАДО СДЕЛАТЬ!
+
+
 
         for (int i = 0; i < (int)documents.size(); ++i) {
             if  ( MatchDocument (documents[i], string_out_set))
