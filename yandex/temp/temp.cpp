@@ -39,6 +39,26 @@ int main(int argc, char *argv[])
        }
        cout<<endl;
     }
+    cout<<endl<<endl;
+
+    vector<string>vs_temp={"hello","world","c++"};
+    vector<string>vs_temp0={"hel","wor","c"};
+
+    pair <int, vector<string>> pair_int_vector = {-9999,{vs_temp}};
+    pair <int, vector<string>> pair_int_vector0 = {-7777,{vs_temp0}};
+
+    pair <int, vector<string>> pair_int_vector2 = {pair_int_vector.first, pair_int_vector0.second};
+
+    document_words.push_back (pair_int_vector2);
+
+    cout<<"new vector"<<endl;
+
+    for ( const auto &[i,vs] : document_words) {
+       for (const auto g : vs) {
+          cout<<g<<' '; 
+       }
+       cout<<endl;
+    }
     
     return 0;
 }
