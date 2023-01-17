@@ -1,7 +1,10 @@
+max = 10
 
-<html>
-    <body>
-        <p>Hello!</p>
-    </body>
-</html>
+print "Starting"
 
+for i in range(max):print 
+    print "Counter:", i
+
+print "Done"
+
+for i in range(max):print 
