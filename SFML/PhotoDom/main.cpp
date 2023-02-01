@@ -18,12 +18,8 @@ namespace rr{
 
 int main ()
 {
-
-   /* sf::Vector2f siz (600,500); */
-
-
-    sf::Sprite sprite;
-    sf::Texture  myPhoto;
+    sf::Sprite  sprite;
+    sf::Texture myPhoto;
                  myPhoto.loadFromFile ("./image.jpg");
 
 
