@@ -1,15 +1,26 @@
 #include <iostream>
 using namespace std; 
 
-void foo  ( );
-
-void foo  ( ){
-    cout << "hello foo" << endl;
-}
-int main  ( )
+void a(int w)
 {
-    int a = 25;
-    a++;
-    cout << a << endl;
-    foo  ( );
+    for (int i = 0; i < w; ++i) {
+       cout<<i<<' '; 
+    }
+    cout<<endl;
+}
+
+void b (int w)
+{
+    for (int i = 0; i < w; ++i) {
+       a(i); 
+    }
+}
+
+
+int main ()
+{
+    int w;
+    cin>>w;
+    b(w);
+    return 0;
 }
