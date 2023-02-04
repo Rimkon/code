@@ -3,14 +3,22 @@
 /* https://invisible-island.net/ncurses/ncurses.faq.html */
 /* http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/NCURSES-Programming-HOWTO.html#ABOUTINIT */
 #include <string.h>
+#include <stdio.h>
 #include <locale.h>
 #include <ncurses.h>
 #include <string>
+#include <locale.h>
+#include <libintl.h>
 
+//g++ ./main.cpp -Wall -lncursesw
 
 void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string);
 int main(int argc, char *argv[])
-{	initscr();			/* Start curses mode 		*/
+{
+
+  setlocale(LC_ALL, "");
+    initscr();			/* Start curses mode 		*/
+
 	/* if(has_colors() == FALSE) */
 	/* {	endwin(); */
 	/* 	printf("Your terminal does not support color\n"); */
@@ -20,7 +28,7 @@ int main(int argc, char *argv[])
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 
 	attron(COLOR_PAIR(1));
-	print_in_middle(stdscr, LINES / 2, 0, 0, "привет мир Viola !!! In color ...");
+	print_in_middle(stdscr, LINES / 2, 0, 0, "привет мир? ёйяюцщ ");
 	attroff(COLOR_PAIR(1));
     	getch();
 	endwin();
