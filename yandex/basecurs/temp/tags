@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/idis/code/yandex/temp/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+0	.vimspector.json	/^        "args": [ "*${args:--update-gadget-config}" ],$/;"	s	array:configurations.CPP: Run current script.configuration.args
+AddDocument	2_search_relevant.cpp	/^AddDocument  ( vector< pair<int, vector<string>>>  &documents,       $/;"	f	typeref:typename:void
+AddDocument	mysearch.cpp	/^void AddDocument  ( vector <pair_int_vecorStr_T>  & documents, $/;"	f	typeref:typename:void
+CPP: Run current script	.vimspector.json	/^    "CPP: Run current script": {$/;"	o	object:configurations
+CheckAnagram	perebor.cpp	/^bool CheckAnagram(const string& s1, const string& s2) {$/;"	f	typeref:typename:bool
+CheckIsTrue	perebor.cpp	/^void CheckIsTrue(bool value) {$/;"	f	typeref:typename:void
+FindDocuments	2_search_relevant.cpp	/^FindDocuments  ( const vector<  pair<int, vector<string> >  >& documents,$/;"	f	typeref:typename:vector<pair<int,int>>
+MatchDocument	2_search_relevant.cpp	/^MatchDocument  ( const  pair<int, vector<string>>  &documents,   $/;"	f	typeref:typename:int
+MatchDocument	temp.cpp	/^MatchDocument  ( const vector< pair<int, vector<string>>>  &document_words,    \/\/ Вход: в/;"	f	typeref:typename:bool
+Match_String	mysearch.cpp	/^int  Match_String  ( const pair_int_vecorStr_T &d,  const string &s)$/;"	f	typeref:typename:int
+ParseQuery	2_search_relevant.cpp	/^ParseQuery  ( const     string  &text,                     \/\/ Вход: строка, слов/;"	f	typeref:typename:set<string>
+ParseStopWords	2_search_relevant.cpp	/^ParseStopWords  ( const string& text ) {                   \/\/  Вход: строка слов$/;"	f	typeref:typename:set<string>
+Parsing_String_Set	mysearch.cpp	/^set<string>  Parsing_String_Set     ( const vector<string> &v )$/;"	f	typeref:typename:set<string>
+Parsing_String_Vector	mysearch.cpp	/^vector<string>  Parsing_String_Vector  ( const string & str )$/;"	f	typeref:typename:vector<string>
+Python: Attach To Vim	.vimspector.json	/^    "Python: Attach To Vim": {$/;"	o	object:configurations
+ReadLine	2_search_relevant.cpp	/^ReadLine() {                                               \/\/  Вход: поток симво/;"	f	typeref:typename:string
+ReadLineWithNumber	2_search_relevant.cpp	/^ReadLineWithNumber() { \/\/ ---------------------------------- чтение числа и стр/;"	f	typeref:typename:int
+ReadString	mysearch.cpp	/^ReadString ()$/;"	f	typeref:typename:string
+Relevance	mysearch.cpp	/^map <int, int> Relevance (const vector<pair_int_vecorStr_T> & d, const string &s)$/;"	f	typeref:typename:map<int,int>
+ShowContayner	mysearch.cpp	/^ShowContayner ( const set<string> & v )$/;"	f	typeref:typename:void
+ShowContayner	mysearch.cpp	/^ShowContayner ( const vector<string> & v )$/;"	f	typeref:typename:void
+SplitIntoWords	2_search_relevant.cpp	/^SplitIntoWords  ( const string&  text ) {                  \/\/  Вход: строка слов$/;"	f	typeref:typename:vector<string>
+SplitIntoWordsNoStop	2_search_relevant.cpp	/^SplitIntoWordsNoStop  ( const     string&  text,           \/\/  Вход: строка и set (/;"	f	typeref:typename:vector<string>
+adapter	.vimspector.json	/^      "adapter": "vscode-cpptools",$/;"	s	object:configurations.CPP: Run current script
+adapter	.vimspector.json	/^      "adapter": "vscode-cpptools",$/;"	s	object:configurations.Python: Attach To Vim
+args	.vimspector.json	/^        "args": [ "*${args:--update-gadget-config}" ],$/;"	a	object:configurations.CPP: Run current script.configuration
+configuration	.vimspector.json	/^      "configuration": {$/;"	o	object:configurations.CPP: Run current script
+configuration	.vimspector.json	/^      "configuration": {$/;"	o	object:configurations.Python: Attach To Vim
+configurations	.vimspector.json	/^  "configurations": {$/;"	o
+documents_noStopWord	mysearch.cpp	/^vector<string>  documents_noStopWord (const vector<string>& d, const set<string> & s)$/;"	f	typeref:typename:vector<string>
+fromStrToCharMap	perebor.cpp	/^map <char, int> fromStrToCharMap(const string &s1)$/;"	f	typeref:typename:map<char,int>
+host	.vimspector.json	/^        "host": "localhost"$/;"	s	object:configurations.Python: Attach To Vim.variables
+justMyCode#json	.vimspector.json	/^        "justMyCode#json": "${justMyCode:true}"$/;"	s	object:configurations.CPP: Run current script.configuration
+main	2_search_relevant.cpp	/^main() {$/;"	f	typeref:typename:int
+main	mysearch.cpp	/^int main()$/;"	f	typeref:typename:int
+main	perebor.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	temp.cpp	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+pair_int_vecorStr_T	mysearch.cpp	/^typedef pair<int, vector<string>> pair_int_vecorStr_T;$/;"	t	typeref:typename:pair<int,vector<string>>	file:
+port	.vimspector.json	/^        "port": "5678",$/;"	s	object:configurations.Python: Attach To Vim.variables
+program	.vimspector.json	/^        "program": ".\/a.out",$/;"	s	object:configurations.CPP: Run current script.configuration
+request	.vimspector.json	/^        "request": "attach"$/;"	s	object:configurations.Python: Attach To Vim.configuration
+request	.vimspector.json	/^        "request": "launch",$/;"	s	object:configurations.CPP: Run current script.configuration
+variables	.vimspector.json	/^      "variables": {$/;"	o	object:configurations.Python: Attach To Vim
